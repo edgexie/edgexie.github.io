@@ -42,6 +42,11 @@ export default defineConfig({
         link: '/cn/back-end/nestjs/开始',
         activeMatch: '/back-end/',
       },
+      {
+        text: '嵌入式技术',
+        link: '/cn/embedded-system/esp8266/使用PlatformIO通过网络控制LED',
+        activeMatch: '/embedded-system/',
+      },
       { text: '工程化', link: '/cn/engineering/' },
       {
         text: 'Mx组件',
@@ -101,6 +106,18 @@ export default defineConfig({
                   link: 'intergrate-with-vercel',
                 },
               ],
+            },
+          ],
+        },
+      ],
+      '/cn/embedded-system/esp8266/': [
+        {
+          text: 'esp8266',
+          base: './',
+          items: [
+            {
+              text: '使用PlatformIO通过网络控制LED',
+              link: '使用PlatformIO通过网络控制LED',
             },
           ],
         },
