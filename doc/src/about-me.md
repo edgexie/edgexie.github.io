@@ -53,7 +53,7 @@ outline: false
 
 # 关于我
 
-职业生涯始于，起初专注于工业自动化，并主要负责 PLC 编程。随着时间的推移，我逐渐将目光转向了前端开发，成为了一名全栈工程师。
+起初专注于工业自动化，并主要负责 PLC 和 组态软件 编程。随着时间的推移，逐渐将目光转向了前端开发，成了一名全栈开发。
 
 在 2015 年下半年，我开始了前端实习生的职业生涯。我熟练掌握了 jQuery 和 AngularJS，并学习了 PHP，对 MVC 模式有了深入的理解，同时也开始接触了 ThinkPHP 框架。
 
@@ -159,7 +159,6 @@ outline: false
 使用户了解保单更方便，更及时。
 
 ![项目实拍](https://bucket.edgexie.top/for-work/warranty.png){data-zoomable}
-![项目实拍](https://bucket.edgexie.top/for-work/warranty-h5.png){data-zoomable}
 
 ### 中山智慧环保数据大屏
 
