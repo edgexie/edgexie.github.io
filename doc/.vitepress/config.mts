@@ -7,7 +7,17 @@ export default defineConfig({
   title: 'MX-CodeCraft',
   description: 'think things through',
   srcDir: './src',
-  head: [['link', { rel: 'icon', href: '/favicon_io/favicon.ico' }]],
+  head: [
+    ['link', { rel: 'icon', href: '/favicon_io/favicon.ico' }],
+    [
+      'meta',
+      {
+        name: 'viewport',
+        content:
+          'width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1',
+      },
+    ],
+  ],
   lang: 'zh-CN',
   lastUpdated: true,
   appearance: 'dark',
