@@ -155,7 +155,16 @@ outline: false
 
 ### 保单管理系统
 
-项目使用 ``
+项目使用若依进行二次开发，系统分为后台管理和 H5 页。并对接微信相关接口，获取用户在微信的唯一身份。在保单到期前通过微信通知用户。
+使用户了解保单更方便，更及时。
+
+![项目实拍](https://bucket.edgexie.top/for-work/warranty.png){data-zoomable}
+![项目实拍](https://bucket.edgexie.top/for-work/warranty-h5.png){data-zoomable}
+
+### 中山智慧环保数据大屏
+
+![项目实拍](https://bucket.edgexie.top/for-work/zhong-shan-onemap-v1.0.0.jpg){data-zoomable}
+![项目实拍](https://bucket.edgexie.top/for-work/zhongshan.jpg){data-zoomable}
 
 ### 煤炭安全监管平台大屏
 
