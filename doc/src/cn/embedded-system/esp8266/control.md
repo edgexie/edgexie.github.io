@@ -1,28 +1,34 @@
 <script setup lang="ts">
   import { ref, onMounted } from 'vue'
-  import { getEspUrl } from '/utils'
+  import { getUrl } from '/utils'
   import axios from 'axios'
   import { message} from 'ant-design-vue';
   const LED_BUILTIN = ref<boolean>(false)
-
+  const ledButtonLoading = ref<boolean>(false)
   // 获取LED 状态 
   onMounted(()=>{
-    axios.get(getEspUrl('/led'))
+    ledButtonLoading.value = true
+    axios.get(getUrl('/esp8266/led'))
     .then(res=>{
-      LED_BUILTIN.value = !res.data.status
+      LED_BUILTIN.value = !res.data.data.status
     })
     .catch(err=>{
       message.error('获取状态失败，可能设备不在线');
+    }).finally(()=>{
+        ledButtonLoading.value = false
     })
   })
 
   const handleLed = (checked)=>{
-    axios.post(getEspUrl('/led'), {checked})
+      ledButtonLoading.value = true
+    axios.post(getUrl('/esp8266/led'), {checked})
     .then(res=>{
-      message.success(res.data)})
+      message.success(res.data.data)})
     .catch(err=>{
       message.error('操作失败');
       LED_BUILTIN.value = false
+    }).finally(()=>{
+        ledButtonLoading.value = false
     })
   }
 
@@ -31,5 +37,5 @@
 ## 内置 LED 灯控制
 
 <div>
- <a-switch v-model:checked="LED_BUILTIN" @click="handleLed"/>
+ <a-switch v-model:checked="LED_BUILTIN" @click="handleLed" :loading="ledButtonLoading"/>
 </div>
