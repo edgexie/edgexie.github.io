@@ -1,6 +1,10 @@
 > 通过 HTTP POST 请求控制 MCU 上的内置 LED 灯
 
-usb 转 串口 `ch340h`官方[驱动下载地址]()<br />本文将学到
+这篇文章同时发表在[我的博客](https://blog.edgexie.top/cn/embedded-system/esp8266/%E4%BD%BF%E7%94%A8PlatformIO%E9%80%9A%E8%BF%87%E7%BD%91%E7%BB%9C%E6%8E%A7%E5%88%B6LED.html)
+
+usb 转 串口 `ch340h`官方[驱动下载地址](https://www.wch.cn/download/CH341SER_EXE.html)
+
+本文将介绍
 
 - platform io 的简单使用
 - esp8266 使能一个 GPIO 为输出状态

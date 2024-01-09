@@ -60,7 +60,7 @@ export default defineConfig({
       { text: '工程化', link: '/cn/engineering/' },
       {
         text: 'Mx组件',
-        link: '/cn/mx-components/',
+        link: '/cn/mx-components/common-components/',
         activeMatch: '/mx-components/',
       },
     ],
@@ -126,16 +126,20 @@ export default defineConfig({
           base: './',
           items: [
             {
+              text: '控制测试页',
+              link: 'control',
+            },
+            {
               text: '使用PlatformIO通过网络控制LED',
               link: '使用PlatformIO通过网络控制LED',
             },
           ],
         },
       ],
-      '/cn/mx-components/': [
+      '/cn/mx-components/common-components/': [
         {
           text: '公共组件',
-          base: './common-components/',
+          base: './',
           items: [{ text: '按钮', link: '按钮' }],
         },
       ],

@@ -20,6 +20,7 @@ import {
   Row,
   Collapse,
   CollapsePanel,
+  Switch
 } from 'ant-design-vue';
 // import Mx from "@mx/button";
 export default {
@@ -54,6 +55,7 @@ export default {
     app.use(Row);
     app.use(Collapse);
     app.use(CollapsePanel);
+    app.use(Switch);
     // app.use(Mx);
     // register your custom global components
   },
