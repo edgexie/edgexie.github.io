@@ -25,8 +25,10 @@
   "dependencies": {
     "ant-design-vue": "^4.0.8",
     "axios": "^1.6.5",
+    "element-plus": "^2.6.1",
     "leaflet": "^1.9.4",
     "medium-zoom": "^1.1.0",
+    "mqtt": "^5.3.6",
     "vue": "^3.3.4"
   }
 }

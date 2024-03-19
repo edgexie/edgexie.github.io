@@ -1,5 +1,6 @@
 import DefaultTheme from 'vitepress/theme';
 import './custom.css';
+import 'element-plus/dist/index.css';
 import Layout from './Layout.vue';
 import AboutMe from './AboutMe.vue';
 import { onMounted, watch, nextTick } from 'vue';
@@ -20,8 +21,48 @@ import {
   Row,
   Collapse,
   CollapsePanel,
-  Switch
+  Switch,
+  Typography,
 } from 'ant-design-vue';
+import {
+  ElButton,
+  ElCard,
+  ElForm,
+  ElFormItem,
+  ElSelect,
+  ElOption,
+  ElRow,
+  ElCol,
+  ElInput,
+} from 'element-plus';
+const AArr = [
+  Button,
+  Card,
+  ConfigProvider,
+  Form,
+  FormItem,
+  Input,
+  Alert,
+  Space,
+  Popover,
+  Col,
+  Row,
+  Collapse,
+  CollapsePanel,
+  Switch,
+  Typography,
+];
+const ElArr = [
+  ElButton,
+  ElCard,
+  ElForm,
+  ElFormItem,
+  ElSelect,
+  ElOption,
+  ElRow,
+  ElCol,
+  ElInput,
+];
 // import Mx from "@mx/button";
 export default {
   ...DefaultTheme,
@@ -42,21 +83,9 @@ export default {
   Layout,
   enhanceApp(ctx) {
     const { app } = ctx;
-    app.use(Button);
-    app.use(Card);
-    app.use(ConfigProvider);
-    app.use(Form);
-    app.use(FormItem);
-    app.use(Input);
-    app.use(Alert);
-    app.use(Space);
-    app.use(Popover);
-    app.use(Col);
-    app.use(Row);
-    app.use(Collapse);
-    app.use(CollapsePanel);
-    app.use(Switch);
-    // app.use(Mx);
+
     // register your custom global components
+
+    [...AArr, ...ElArr].forEach((e) => app.use(e));
   },
 };

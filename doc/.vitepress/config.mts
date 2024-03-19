@@ -143,6 +143,10 @@ export default defineConfig({
               text: '使用PlatformIO通过网络控制LED',
               link: '使用PlatformIO通过网络控制LED',
             },
+            {
+              text: 'MQTT 简易客户端',
+              link: 'mqtt-client',
+            },
           ],
         },
       ],
@@ -157,18 +161,18 @@ export default defineConfig({
     // 社交账号
     socialLinks: [
       { icon: 'github', link: 'https://github.com/edgexie' },
-      {
-        icon: {
-          svg: zhihu,
-        },
-        link: 'https://www.zhihu.com/people/edgexxx',
-      },
-      {
-        icon: {
-          svg: bilibili,
-        },
-        link: 'https://space.bilibili.com/337059066?spm_id_from=333.999.0.0',
-      },
+      // {
+      //   icon: {
+      //     svg: zhihu,
+      //   },
+      //   link: 'https://www.zhihu.com/people/edgexxx',
+      // },
+      // {
+      //   icon: {
+      //     svg: bilibili,
+      //   },
+      //   link: 'https://space.bilibili.com/337059066?spm_id_from=333.999.0.0',
+      // },
     ],
     editLink: {
       pattern:
