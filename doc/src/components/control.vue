@@ -1,8 +1,21 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 import { message } from 'ant-design-vue';
 import mqtt from 'mqtt';
-const client = mqtt.connect('wss://broker.emqx.io:8084/mqtt');
+import { getMqttAuthInfo } from '/utils';
+
+const clientId = 'emqx_vue3_' + Math.random().toString(16).substring(2, 8);
+// [TO DO] how to hide the name and pwd
+const { username, password } = getMqttAuthInfo();
+
+const client = mqtt.connect(
+  'wss://seab0915.ala.cn-hangzhou.emqxsl.cn:8084/mqtt',
+  {
+    clientId,
+    username,
+    password,
+  }
+);
 
 client.on('connect', () => {
   client.subscribe('esp8266/will', (err) => {
@@ -35,6 +48,11 @@ const status = ref<boolean>(false);
 const handleLed = (checked) => {
   client.publish('led/ctl', checked ? 'open' : 'close');
 };
+
+onUnmounted(() => {
+  console.log('取消订阅');
+  client.end();
+});
 </script>
 
 <template>
