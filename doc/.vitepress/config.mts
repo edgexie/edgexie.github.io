@@ -133,6 +133,10 @@ export default defineConfig({
               text: '使用PlatformIO通过网络控制LED',
               link: '使用PlatformIO通过网络控制LED',
             },
+            {
+              text: 'MQTT 简易客户端',
+              link: 'mqtt-client',
+            },
           ],
         },
       ],
@@ -145,9 +149,7 @@ export default defineConfig({
       ],
     },
     // 社交账号
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/edgexie' }
-    ],
+    socialLinks: [{ icon: 'github', link: 'https://github.com/edgexie' }],
     editLink: {
       pattern:
         'https://github.com/edgexie/edgexie.github.io/tree/master/docs/src/:path',
