@@ -1,1 +1,0 @@
-var e={VITE_URL:"https://mx-codecraft.edgexie.top",VITE_ESP8266_URL:"http://edgexie.myddns.me:8001",BASE_URL:"/",MODE:"production",DEV:!1,PROD:!0,SSR:!1};const a=t=>"https://mx-codecraft.edgexie.top"+t,o=()=>({username:e.VITE_MQTT_USERNAME,password:e.VITE_MQTT_PASSWORD});export{o as a,a as g};
