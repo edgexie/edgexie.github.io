@@ -92,10 +92,10 @@ export default defineConfig({
           ],
         },
       ],
-      '/cn/back-end/nestjs/': [
+      '/cn/back-end': [
         {
           text: 'NestJS',
-          base: './',
+          base: 'cn/back-end/nestjs/',
           collapsed: false,
           items: [
             { text: 'Get start', link: '开始' },
@@ -119,7 +119,17 @@ export default defineConfig({
             },
           ],
         },
+        {
+          text: 'Python',
+          base: '/cn/back-end/python/',
+          collapsed: true,
+          items: [
+            { text: 'Get start', link: '开始' },
+            { text: '变量', link: '变量' },
+          ],
+        },
       ],
+
       '/cn/embedded-system/esp8266/': [
         {
           text: 'esp8266',
