@@ -15,7 +15,7 @@ const qosList = [0, 1, 2];
  */
 const connection = reactive({
   // ws or wss
-  protocol: 'ws',
+  protocol: 'wss',
   host: 'broker.emqx.io',
   // ws -> 8083; wss -> 8084
   port: 8083,

@@ -3,6 +3,7 @@ import { ref, onMounted, onUnmounted } from 'vue';
 import { message } from 'ant-design-vue';
 import mqtt from 'mqtt';
 import { getMqttAuthInfo } from '/utils';
+console.log(import.meta.env.VITE_MQTT_USERNAME);
 
 const clientId = 'emqx_vue3_' + Math.random().toString(16).substring(2, 8);
 // [TO DO] how to hide the name and pwd

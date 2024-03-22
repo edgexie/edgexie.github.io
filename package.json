@@ -13,8 +13,8 @@
   "scripts": {
     "mx:dev": "pnpm -r --filter=./projects/mx/ run dev",
     "commitlint": "commitlint --edit",
-    "docs:dev": "vitepress dev doc",
-    "docs:build": "vitepress build doc",
+    "docs:dev": "vitepress dev doc ",
+    "docs:build": "cross-env VITE_MQTT_USERNAME=${{ env.MQTT_EMQX_PASSWORD }} VITE_MQTT_PASSWORD=${{env.MQTT_EMQX_PASSWORD}} vitepress build doc",
     "docs:preview": "vitepress preview doc"
   },
   "husky": {
@@ -25,6 +25,7 @@
   "dependencies": {
     "ant-design-vue": "^4.0.8",
     "axios": "^1.6.5",
+    "cross-env": "^7.0.3",
     "element-plus": "^2.6.1",
     "leaflet": "^1.9.4",
     "medium-zoom": "^1.1.0",
