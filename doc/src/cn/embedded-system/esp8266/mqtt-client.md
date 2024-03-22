@@ -7,6 +7,4 @@ const MqttClient = defineClientComponent(() => {
 })
 </script>
 
-## ESP8266 内置灯控制
-
 <MqttClient />
