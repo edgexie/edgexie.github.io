@@ -14,7 +14,7 @@
     "mx:dev": "pnpm -r --filter=./projects/mx/ run dev",
     "commitlint": "commitlint --edit",
     "docs:dev": "vitepress dev doc ",
-    "docs:build": "cross-env VITE_MQTT_USERNAME=${{ env.MQTT_EMQX_PASSWORD }} VITE_MQTT_PASSWORD=${{env.MQTT_EMQX_PASSWORD}} vitepress build doc",
+    "docs:build": "cross-env VITE_MQTT_USERNAME=$MQTT_EMQX_USERNAME VITE_MQTT_PASSWORD=$MQTT_EMQX_PASSWORD vitepress build doc",
     "docs:preview": "vitepress preview doc"
   },
   "husky": {
