@@ -49,7 +49,7 @@ jobs:
 
       # 项目打包
       - name: Build
-        run: cross-env VITE_MQTT_USERNAME=${{ env.MQTT_EMQX_PASSWORD }} VITE_MQTT_PASSWORD=${{env.MQTT_EMQX_PASSWORD}} vitepress build doc
+        run: cross-env VITE_MQTT_USERNAME=${{ secrets.MQTT_EMQX_PASSWORD }} VITE_MQTT_PASSWORD=${{secrets.MQTT_EMQX_PASSWORD}} vitepress build doc
 
       # https://github.com/peaceiris/actions-gh-pages 部署到分支
       - name: Deploy
