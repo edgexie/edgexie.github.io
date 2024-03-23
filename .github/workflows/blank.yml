@@ -49,7 +49,7 @@ jobs:
 
       # 项目打包
       - name: Build
-        run: pnpm run docs:build
+        run: echo $MQTT_EMQX_PASSWORD | pnpm run docs:build
         env:
           MQTT_EMQX_PASSWORD: ${{secrets.MQTT_EMQX_PASSWORD}}
           MQTT_EMQX_USERNAME: ${{secrets.MQTT_EMQX_USERNAME}}
