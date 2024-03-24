@@ -4,7 +4,7 @@ name: CI
 # 触发workflow的条件
 on:
   push: # 当master分支有push的时候触发workflow
-    branches: [ "master" ]
+    branches: ['master']
 
 # 任务
 jobs:
@@ -22,14 +22,14 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v3.8.1
         with:
-          node-version: "18.x"
+          node-version: '18.x'
 
       # https://github.com/pnpm/action-setup 安装pnpm，并做依赖缓存
       - name: Install pnpm
         uses: pnpm/action-setup@v2
         with:
-            version: 8
-            run_install: false
+          version: 8
+          run_install: false
 
       - name: Get pnpm store directory
         shell: bash
@@ -49,8 +49,13 @@ jobs:
 
       # 项目打包
       - name: Build
-        run: pnpm run docs:build
-      
+        run: |
+          echo "The MQTT_EMQX_PASSWORD is $MQTT_EMQX_PASSWORD" &&
+          pnpm run docs:build
+        env:
+          MQTT_EMQX_PASSWORD: ${{secrets.MQTT_EMQX_PASSWORD}}
+          MQTT_EMQX_USERNAME: ${{secrets.MQTT_EMQX_USERNAME}}
+
       # https://github.com/peaceiris/actions-gh-pages 部署到分支
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3

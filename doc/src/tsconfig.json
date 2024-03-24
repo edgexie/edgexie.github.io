@@ -1,6 +1,9 @@
 {
   "compilerOptions": {
     "baseUrl": "./",
+    "moduleResolution": "node",
+    "module": "esnext",
+    "types": ["vite/client"],
     "paths": {
       "@/*": ["src/*"]
     }
