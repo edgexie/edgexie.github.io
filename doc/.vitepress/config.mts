@@ -39,7 +39,7 @@ export default defineConfig({
       },
       {
         text: '前端进阶',
-        link: '/cn/front-end/frame/vue/',
+        link: '/cn/front-end/frame/vue3/快速开始',
         activeMatch: '/front-end/frame',
       },
       {
@@ -76,8 +76,22 @@ export default defineConfig({
       ],
       '/cn/front-end/frame/': [
         {
-          text: 'vue',
+          text: 'vue3',
           base: './',
+          items: [
+            {
+              text: '快速开始',
+              link: '快速开始',
+            },
+            {
+              text: '监听器',
+              link: '监听器',
+            },
+            {
+              text: '组件',
+              link: '组件',
+            },
+          ],
         },
       ],
       '/cn/front-end/visual/': [
