@@ -1,7 +1,9 @@
 import { defineConfig } from 'vitepress';
 
-import zhihu from './zhihu.mts';
-import bilibili from './bilibili.mts';
+import zhihu from './config/zhihu.mts';
+import bilibili from './config/bilibili.mts';
+import { zh } from './config/zh.mts';
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: 'MX-CodeCraft',
@@ -30,148 +32,7 @@ export default defineConfig({
       text: '最后更新时间：',
     },
     logo: '/favicon_io/favicon-32x32.png',
-    nav: [
-      { text: '首页', link: '/' },
-      {
-        text: '前端基础',
-        link: '/cn/front-end/base/rank',
-        activeMatch: '/front-end/base/',
-      },
-      {
-        text: '前端进阶',
-        link: '/cn/front-end/frame/vue3/快速开始',
-        activeMatch: '/front-end/frame',
-      },
-      {
-        text: '可视化',
-        link: '/cn/front-end/visual/leaflet/with-antdv-button',
-        activeMatch: '/front-end/visual',
-      },
-      {
-        text: '后端技术',
-        link: '/cn/back-end/nestjs/开始',
-        activeMatch: '/back-end/',
-      },
-      {
-        text: '嵌入式技术',
-        link: '/cn/embedded-system/esp8266/使用PlatformIO通过网络控制LED',
-        activeMatch: '/embedded-system/',
-      },
-      { text: '工程化', link: '/cn/engineering/' },
-      {
-        text: 'Mx组件',
-        link: '/cn/mx-components/common-components/',
-        activeMatch: '/mx-components/',
-      },
-    ],
 
-    sidebar: {
-      '/cn/front-end/base/': [
-        {
-          text: '前端职级与招聘',
-          base: './',
-          link: 'rank',
-        },
-        { text: '书写规范', base: './', link: '书写规范' },
-      ],
-      '/cn/front-end/frame/': [
-        {
-          text: 'vue3',
-          base: './',
-          items: [
-            {
-              text: '快速开始',
-              link: '快速开始',
-            },
-            {
-              text: '监听器',
-              link: '监听器',
-            },
-            {
-              text: '组件',
-              link: '组件',
-            },
-          ],
-        },
-      ],
-      '/cn/front-end/visual/': [
-        {
-          text: 'leaflet',
-          base: './',
-          items: [
-            {
-              text: '使用a-button',
-              link: 'with-antdv-button',
-            },
-          ],
-        },
-      ],
-      '/cn/back-end': [
-        {
-          text: 'NestJS',
-          base: 'cn/back-end/nestjs/',
-          collapsed: false,
-          items: [
-            { text: 'Get start', link: '开始' },
-            { text: '控制器', link: '控制器' },
-            { text: '中间件', link: '中间件' },
-            { text: '异常过滤器', link: '异常过滤器' },
-            { text: '管道', link: '管道' },
-            { text: '守卫', link: '守卫' },
-            { text: '拦截器', link: '拦截器' },
-            { text: '自定义装饰器', link: '自定义装饰器' },
-            { text: '与MySQL', link: '与MySQL' },
-            {
-              text: '实践',
-              base: './practice/',
-              items: [
-                {
-                  text: 'nestjs与vercel集成',
-                  link: 'intergrate-with-vercel',
-                },
-              ],
-            },
-          ],
-        },
-        {
-          text: 'Python',
-          base: '/cn/back-end/python/',
-          collapsed: true,
-          items: [
-            { text: 'Get start', link: '开始' },
-            { text: '变量', link: '变量' },
-          ],
-        },
-      ],
-
-      '/cn/embedded-system/esp8266/': [
-        {
-          text: 'esp8266',
-          base: './',
-          items: [
-            {
-              text: '控制测试页',
-              link: 'control',
-            },
-            {
-              text: '使用PlatformIO通过网络控制LED',
-              link: '使用PlatformIO通过网络控制LED',
-            },
-            {
-              text: 'MQTT 简易客户端',
-              link: 'mqtt-client',
-            },
-          ],
-        },
-      ],
-      '/cn/mx-components/common-components/': [
-        {
-          text: '公共组件',
-          base: './',
-          items: [{ text: '按钮', link: '按钮' }],
-        },
-      ],
-    },
     // 社交账号
     socialLinks: [
       { icon: 'github', link: 'https://github.com/edgexie' },
@@ -198,7 +59,9 @@ export default defineConfig({
     root: {
       label: '简体中文',
       lang: 'cn',
+      ...zh,
     },
+
     // en: {
     //   label: "English",
     //   lang: "en", // optional, will be added  as `lang` attribute on `html` tag
