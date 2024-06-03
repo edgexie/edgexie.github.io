@@ -23,6 +23,10 @@ function nav(): DefaultTheme.NavItem[] {
           text: 'vue3',
           link: '/cn/front-end/frame/vue3/快速开始',
         },
+        {
+          text: 'pure-admin',
+          link: '/cn/front-end/frame/pure-admin/快速开始',
+        },
       ],
       activeMatch: '/front-end/frame',
     },
@@ -41,6 +45,10 @@ function nav(): DefaultTheme.NavItem[] {
         {
           text: 'python',
           link: '/cn/back-end/python/快速开始',
+        },
+        {
+          text: 'java',
+          link: '/cn/back-end/java/快速开始',
         },
       ],
       activeMatch: '/back-end/',
@@ -97,6 +105,19 @@ function sidebar(): DefaultTheme.Sidebar {
         ],
       },
     ],
+    '/cn/front-end/frame/pure-admin/': {
+      base: '/cn/front-end/frame/pure-admin/',
+      items: [
+        {
+          text: '快速开始',
+          link: '快速开始',
+        },
+        {
+          text: '权限',
+          link: '权限',
+        },
+      ],
+    },
     '/cn/front-end/visual/': [
       {
         text: 'leaflet',
@@ -152,7 +173,30 @@ function sidebar(): DefaultTheme.Sidebar {
         ],
       },
     ],
-
+    '/cn/back-end/java/': [
+      {
+        text: 'java',
+        base: '/cn/back-end/java/',
+        items: [
+          {
+            text: '快速开始',
+            link: '快速开始',
+          },
+          {
+            text: '对象和类',
+            link: '对象和类',
+          },
+          {
+            text: '基本数据类型',
+            link: '基本数据类型',
+          },
+          {
+            text: '变量',
+            link: '变量',
+          },
+        ],
+      },
+    ],
     '/cn/embedded-system/esp8266/': [
       {
         text: 'esp8266',
