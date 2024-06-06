@@ -194,6 +194,18 @@ function sidebar(): DefaultTheme.Sidebar {
             text: '变量',
             link: '变量',
           },
+          {
+            text: '运算符',
+            link: '运算符',
+          },
+          {
+            text: 'while、for、if和switch',
+            link: 'while、for、if和switch',
+          },
+          {
+            text: '数组',
+            link: '数组',
+          },
         ],
       },
     ],
