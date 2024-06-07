@@ -146,11 +146,15 @@ function sidebar(): DefaultTheme.Sidebar {
           { text: '与MySQL', link: '与MySQL' },
           {
             text: '实践',
-            base: './practice/',
+            base: '/cn/back-end/nestjs/practice/',
             items: [
               {
                 text: 'nestjs与vercel集成',
                 link: 'intergrate-with-vercel',
+              },
+              {
+                text: 'SSE接口',
+                link: 'SSE接口',
               },
             ],
           },
