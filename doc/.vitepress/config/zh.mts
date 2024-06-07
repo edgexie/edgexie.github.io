@@ -50,6 +50,10 @@ function nav(): DefaultTheme.NavItem[] {
           text: 'java',
           link: '/cn/back-end/java/快速开始',
         },
+        {
+          text: 'AI',
+          link: '/cn/back-end/AI/ollama/快速开始',
+        },
       ],
       activeMatch: '/back-end/',
     },
@@ -209,6 +213,18 @@ function sidebar(): DefaultTheme.Sidebar {
           {
             text: '数组',
             link: '数组',
+          },
+        ],
+      },
+    ],
+    '/cn/back-end/AI/ollama/': [
+      {
+        text: 'ollama',
+        base: '/cn/back-end/AI/ollama/',
+        items: [
+          {
+            text: '快速开始',
+            link: '快速开始',
           },
         ],
       },
