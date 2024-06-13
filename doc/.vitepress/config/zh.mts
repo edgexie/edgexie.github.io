@@ -183,7 +183,7 @@ function sidebar(): DefaultTheme.Sidebar {
     ],
     '/cn/back-end/java/': [
       {
-        text: 'java',
+        text: 'java基础',
         base: '/cn/back-end/java/',
         items: [
           {
@@ -213,6 +213,56 @@ function sidebar(): DefaultTheme.Sidebar {
           {
             text: '数组',
             link: '数组',
+          },
+          {
+            text: '方法',
+            link: '方法',
+          },
+          {
+            text: 'stream，文件和IO',
+            link: 'stream，文件和IO',
+          },
+          {
+            text: '异常处理',
+            link: '异常处理',
+          },
+        ],
+      },
+      {
+        text: 'java面向对象',
+        base: '/cn/back-end/java/',
+        items: [
+          {
+            text: '继承、重载和多态',
+            link: '继承、重载和多态',
+          },
+          {
+            text: '抽象类',
+            link: '抽象类',
+          },
+          {
+            text: '枚举',
+            link: '枚举',
+          },
+        ],
+      },
+      {
+        text: 'java高级',
+        base: '/cn/back-end/java/',
+        items: [
+          {
+            text: '数据结构',
+            link: '数据结构',
+          },
+        ],
+      },
+      {
+        text: 'java工程化',
+        base: '/cn/back-end/java/',
+        items: [
+          {
+            text: 'vscode开发java',
+            link: 'vscode开发java',
           },
         ],
       },
