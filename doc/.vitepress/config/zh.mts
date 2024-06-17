@@ -264,6 +264,16 @@ function sidebar(): DefaultTheme.Sidebar {
             text: 'vscode开发java',
             link: 'vscode开发java',
           },
+          {
+            text: 'MyBatis',
+            base: '/cn/back-end/java/MyBatis/',
+            items: [
+              {
+                text: '快速开始',
+                link: '快速开始',
+              },
+            ],
+          },
         ],
       },
     ],
