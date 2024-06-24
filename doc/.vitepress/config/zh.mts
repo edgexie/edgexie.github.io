@@ -272,6 +272,24 @@ function sidebar(): DefaultTheme.Sidebar {
                 text: '快速开始',
                 link: '快速开始',
               },
+              {
+                text: 'Mapper代理开发.md',
+                link: 'Mapper代理开发.md',
+              },
+            ],
+          },
+          {
+            text: 'SpringBoot',
+            base: '/cn/back-end/java/SpringBoot/',
+            items: [
+              {
+                text: '快速开始',
+                link: '快速开始',
+              },
+              {
+                text: '依赖注入和控制反转',
+                link: '依赖注入和控制反转.md',
+              },
             ],
           },
         ],
