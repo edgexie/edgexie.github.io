@@ -288,7 +288,15 @@ function sidebar(): DefaultTheme.Sidebar {
               },
               {
                 text: '依赖注入和控制反转',
-                link: '依赖注入和控制反转.md',
+                link: '依赖注入和控制反转',
+              },
+              {
+                text: '自定义配置和表达式',
+                link: '自定义配置和表达式',
+              },
+              {
+                text: 'restful和静态资源',
+                link: 'restful',
               },
             ],
           },
