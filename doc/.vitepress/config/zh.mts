@@ -13,8 +13,17 @@ function nav(): DefaultTheme.NavItem[] {
     { text: '首页', link: '/' },
     {
       text: '前端基础',
-      link: '/cn/front-end/base/rank',
       activeMatch: '/front-end/base/',
+      items: [
+        {
+          text: '团队建设',
+          link: '/cn/front-end/base/group-build/书写规范',
+        },
+        {
+          text: 'typescript',
+          link: '/cn/front-end/base/ts/快速开始',
+        },
+      ],
     },
     {
       text: '前端进阶',
@@ -79,14 +88,23 @@ function nav(): DefaultTheme.NavItem[] {
 
 function sidebar(): DefaultTheme.Sidebar {
   return {
-    '/cn/front-end/base/': {
-      base: '/cn/front-end/base/',
+    '/cn/front-end/base/group-build': {
+      base: '/cn/front-end/base/group-build/',
       items: [
+        { text: '书写规范', link: '书写规范' },
         {
           text: '前端职级与招聘',
           link: 'rank',
         },
-        { text: '书写规范', link: '书写规范' },
+      ],
+    },
+    '/cn/front-end/base/ts': {
+      base: '/cn/front-end/base/ts/',
+      items: [
+        {
+          text: '快速开始',
+          link: '快速开始',
+        },
       ],
     },
     '/cn/front-end/frame/vue3/': [
