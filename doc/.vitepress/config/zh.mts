@@ -105,6 +105,26 @@ function sidebar(): DefaultTheme.Sidebar {
           text: '快速开始',
           link: '快速开始',
         },
+        {
+          text: '断言',
+          link: '断言',
+        },
+        {
+          text: '函数和函数参数',
+          link: '函数和函数参数',
+        },
+        {
+          text: '接口',
+          link: '接口',
+        },
+        {
+          text: '类',
+          link: '类',
+        },
+        {
+          text: '数据类型',
+          link: '数据类型',
+        },
       ],
     },
     '/cn/front-end/frame/vue3/': [
